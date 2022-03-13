@@ -1,0 +1,15 @@
+.header__curency-briefcase {
+  color: rgb(255, 255, 255);
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: relative;
+  
+  &:hover {
+    cursor: pointer;    
+    color:rgb(253, 255, 225);
+    bottom: 1px;
+    right: 1px;
+  }
+}

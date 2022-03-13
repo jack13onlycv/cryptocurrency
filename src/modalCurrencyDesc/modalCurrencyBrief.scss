@@ -1,0 +1,39 @@
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.modal-currency-brief {
+  display: grid;
+  
+  .modal-currency-brief__title {
+    @include center();
+    font-size: 3rem;
+    margin-bottom: 2vh
+  }
+  
+  li {
+    padding: 1vh 5vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr 5fr 5fr 1fr;
+    gap: 1vw;
+    align-items: center;
+    font-size: 2vmin;
+  }
+  
+  img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .modal-currency-brief__remove:hover {
+    transition: .2s linear;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .modal-currency-brief__remove:active {
+    transform: scale(0.8);
+  }
+}

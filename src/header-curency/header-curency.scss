@@ -1,0 +1,12 @@
+.header__curency-group {
+  color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  flex-grow: 1;
+  
+  .header__curency-item{
+    display: flex;
+    align-items: center;
+    font-size: 2vmin;
+  }
+}

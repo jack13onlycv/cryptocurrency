@@ -1,0 +1,51 @@
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.pagination {
+  gap: 1vw;
+  height: 3vh;
+  margin: 4vh auto;
+  @include center();
+
+  div {
+    @include center();
+  }
+
+  .pagination__button {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    position: relative;
+
+    &:hover {
+      bottom: 1px;
+      right: 1px;
+    }
+
+    &:active {
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .pagination__button.minus {
+    border-right: 30px solid rgba(0, 0, 0, 0.750);
+  }
+
+  .pagination__button.plus {
+    border-left: 30px solid rgba(0, 0, 0, 0.750);
+  }
+
+  .pagination__counter {
+    font-weight: 700;
+    font-size: 1.3rem;
+    outline-offset: none;
+    border: none;
+    width: 40px;
+    text-align: center;
+  }
+}

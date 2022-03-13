@@ -1,0 +1,44 @@
+$width: 4rem;
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.modal-currency-desc {
+  display: grid;
+  grid-row: 1fr 3fr 1fr;
+  gap: 3vh 0;
+
+  .modal-currency-desc__title {
+    @include center();
+    font-size: 64px;
+
+    img {
+      margin-right: 1vw;
+      width: $width;
+      height: $width;
+    }
+  }
+
+  .modal-currency-desc__table {
+    display: grid;
+    padding: 0 8vw 0 14vw;
+    grid-template-columns: 1fr 1fr;
+    gap: 1vh 5vw;
+  }
+
+  .modal-currency-desc__add {
+    @include center();
+    gap: 3vw;
+
+    input, 
+    button {
+      text-align: center;
+      height: 2rem;
+      font-size: 1.3rem;
+      width: $width * 2;
+    }
+  }
+}

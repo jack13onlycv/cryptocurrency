@@ -1,0 +1,65 @@
+$first-color: rgba(255, 218, 7, 0.100);
+$second-color: rgba(0, 140, 255, 0.100);
+
+@mixin list() {
+  display: grid;
+  grid-template-columns: 1fr 8fr 4fr 4fr 2fr;
+  text-align: left;  
+}
+
+main {
+  padding: 2vh 1vh 1vh;
+  cursor: default;
+  
+  .main-wrapper {    
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .curency-item {
+    @include list();
+    
+    padding: 0 15vw;
+  
+    &:nth-child(odd) {
+      background-color: $first-color;
+    }
+    &:nth-child(even) {
+      background-color: $second-color;
+    }
+  
+    .green {
+      color: rgb(34, 121, 0);
+    }
+  
+    .red {
+      color: rgb(221, 0, 0);
+    }
+
+    &:hover {
+      box-shadow: inset 0px 0px 2px black;
+      // border: 1px solid black;
+      border-radius: 5px;
+    }
+
+    div {
+      padding: 2vh 0;
+    }
+  }
+  
+  .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    background-color: $first-color;
+  }
+  
+  .curency-header {
+    @include list();
+    padding: 2vh 15vw;
+    background-color: $second-color;
+  }
+}
+
