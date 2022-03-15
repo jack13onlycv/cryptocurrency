@@ -5,11 +5,51 @@
   align-items: center;
   justify-content: right;
   position: relative;
+
+  .header__curency-briefcase-amount {
+    font-size: 2.5vw;
+  }
   
   &:hover {
     cursor: pointer;    
     color:rgb(253, 255, 225);
     bottom: 1px;
     right: 1px;
+  }
+
+  @media (max-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+
+    span {
+      font-size: 1rem;
+    }
+
+    .header__curency-briefcase-pic {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      font-size: 2.5rem;
+    }
+
+    .header__curency-briefcase-amount {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    span {
+      font-size: 0.8rem;
+    }
+
+    .header__curency-briefcase-pic {
+      font-size: 1.5rem;
+    }
+
+    .header__curency-briefcase-amount {
+      font-size: 1.3rem;
+    }
   }
 }

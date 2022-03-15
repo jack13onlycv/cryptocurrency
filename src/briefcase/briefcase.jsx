@@ -65,23 +65,28 @@ function Briefcase() {
           setModalActive(true);
         }}
       >
-        <span>&#128188;</span>
-        <span>&nbsp;</span>
+        <span className="header__curency-briefcase-pic">&#128188;&nbsp;</span>
         {!empty
       && (
-      <span>
-        $
-        {amount.toFixed(2)}
-        {' '}
-        {plus()}
-        $
-        {' '}
-        {}
-        {' '}
-        (
-        {diffPercent}
-        %)
-      </span>
+      <>
+        <span className="header__curency-briefcase-amount">
+          $
+          {amount.toFixed(2)}
+          &nbsp;
+        </span>
+        <span>
+          {' '}
+          {plus()}
+          $
+          {' '}
+
+          {' '}
+          (
+          {diffPercent}
+          %)
+        </span>
+
+      </>
       )}
         {empty && <span>Empty briefcase</span>}
       </div>

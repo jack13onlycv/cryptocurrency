@@ -13,11 +13,13 @@ header {
     .header__logo {
       background: url('../super_ferret.jpg') no-repeat;
       background-size: cover;
-      // height: 11vh;
-      // height: 100%;
       width: 4rem;
       height: 4rem;
       border-radius: 50%;
+
+      @media (max-width: 600px) {
+        margin: 0 2vw;
+      }
     }
 
     .header__title {
@@ -25,9 +27,12 @@ header {
       justify-content: center;
       align-items: center;
       font-size: 3vw;
-      // height: 100%;
       color: rgb(255, 255, 255);
       margin: 0 2vw;
+
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
   }
 }

@@ -20,6 +20,10 @@ $width: 4rem;
       width: $width;
       height: $width;
     }
+
+    @media (max-width: 800px) {
+      font-size: 32px;
+    }
   }
 
   .modal-currency-desc__table {

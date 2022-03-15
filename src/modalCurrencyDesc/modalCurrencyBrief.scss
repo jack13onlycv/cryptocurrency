@@ -10,7 +10,15 @@
   .modal-currency-brief__title {
     @include center();
     font-size: 3rem;
-    margin-bottom: 2vh
+    margin-bottom: 2vh;
+
+    @media (max-width: 800px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
   }
   
   li {
@@ -20,11 +28,20 @@
     gap: 1vw;
     align-items: center;
     font-size: 2vmin;
+
+    @media (max-width: 600px) {
+      font-size: 3vmin;
+    }
   }
   
   img {
     width: 32px;
     height: 32px;
+
+    @media (max-width: 600px) {
+      width: 16px;
+      height: 16px;
+    }
   }
   
   .modal-currency-brief__remove:hover {
